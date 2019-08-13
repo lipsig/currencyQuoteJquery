@@ -1,0 +1,4 @@
+# currencyQuoteJquery
+APP FOR CHECK CURRENCY QUOTE  VIA CHART JS / APP PARA CHECAR COTAÇÃO NO CHART JS  
+
+![](cotacao.gif)
