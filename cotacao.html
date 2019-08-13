@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="cotacao.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
+</head>
+<body>
+    <div class="container" style="background-color: rgba(41, 41, 41, 0.884); border: solid 1px black; ">
+        <div class="row">
+            <div class="header col-lg-12">
+
+                <h2 style="color:white;" class="col-lg-12">APLICATIVO COTAÇÕES - Dev Felipe Siegle </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 style="color:white;">Selecione a moeda:</h3>
+                <select name="selecionar" id="selecionar" class="form-control">
+
+                    <option value="1" selected>Dolar</option>
+                    <option value="2">Peso</option>
+                    <option value="3">Euro</option>
+                </select>
+
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="news col-lg-12"
+                style="background-color:rgba(41, 41, 41, 0.267); margin-top: -10px; height: 100%;">
+                <h4 id="texto" style="color:white;"></h4>
+            </div>
+        </div>
+        <div class="table-responsive" id="valores">
+            <div>
+                <table class="table" style="color:rgb(201, 201, 201);">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col" style="font-size:30px;">Compra</th>
+                            <th scope="col" style="font-size:30px;">Venda</th>
+                            <th scope="col" style="font-size:30px;">&nbsp;&nbsp;Máxima (Dia)</th>
+                            <th scope="col" style="font-size:30px;">&nbsp;&nbsp;Baixa (Dia)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td id="compra" style="color:white; font-size: 30px;"></td>
+                            <td id="venda" style="color:white; font-size: 30px;">&#8593;</td>
+                            <td id="alta" style="color:white; font-size: 30px;"></td>
+                            <td id="baixa" style="color:white; font-size: 30px;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="loadingArea"></div>
+        <div class="col-lg-12" id="grafico">
+            <h6 style="color:white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Gráfico (Valor da
+                moeda escolhida nos ultimos 10 dias).</h6>
+            <canvas id="myChart" height="40" class="col-lg-12">
+            </canvas>
+        </div>
+    </div>
+    <script src="cotacao.js"></script>
+</body>
+</html>
